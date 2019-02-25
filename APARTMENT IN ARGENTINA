@@ -1,0 +1,40 @@
+#standardSQL
+SELECT *
+FROM `properati-data-public.properties_ar.properties_sell_201706`
+LIMIT 1000
+
+SELECT place_name
+FROM `properati-data-public.properties_ar.properties_sell_201706`
+WHERE  place_name= "Jujuy"
+RESULT: 1
+
+SELECT country_name
+FROM `properati-data-public.properties_ar.properties_sell_201706`
+WHERE  country_name= "Argentina"
+RESULT:https://docs.google.com/spreadsheets/d/1e_EOK-sVIntfPFhMxLiKHEqCSzFAuowwQJAhgWW4N-w/edit?usp=sharing
+
+SELECT place_with_parent_names
+FROM `properati-data-public.properties_ar.properties_sell_201706`
+WHERE  place_with_parent_names= "|Argentina|Mendoza|"
+RESULT: https://docs.google.com/spreadsheets/d/1tIp6FpCCQb_2ihE8CDxhyMD79Ct7pBcLBxDBSlTs3Qg/edit?usp=sharing
+
+SELECT count(distinct(property_type)) FROM `properati-data-public.properties_ar.properties_sell_201706`
+RESULT: 40
+
+SELECT property_type 
+FROM `properati-data-public.properties_ar.properties_sell_201706`
+WHERE property_type="apartment"
+RESULT:https://docs.google.com/spreadsheets/d/1m4jzbEkqkSmDREZVyDmb4pXWdqouZkEzQNFD2ec263M/edit?usp=sharing
+
+SELECT * FROM `properati-data-public.properties_ar.properties_sell_201706`
+WHERE place_name	 LIKE "%Mendoza%" AND
+property_type	 = "house"
+RESULT:01
+
+SELECT property_type 
+FROM `properati-data-public.properties_ar.properties_sell_201706`
+WHERE property_type="house"
+RESULT: https://docs.google.com/spreadsheets/d/1eLo1m9pYlh0mlTkXTagZ3eFLlY0b3b6n5-91yPxlgeg/edit?usp=sharing
+
+SELECT count(distinct(operation)) FROM `properati-data-public.properties_ar.properties_sell_201706`
+RESULT:01
